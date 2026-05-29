@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your First Guide to Yoga | WellNest Kirkstall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700&family=DM+Sans:ital,opsz,wght@0,9..36,400;0,9..36,500;0,9..36,600;1,9..36,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #FAF6F0;            /* cream: primary background */
+      --surface: #FFFFFF;       /* white: card surfaces */
+      --surface-alt: #F6F2EA;   /* warm cream: footer, subtle fills */
+      --surface-sand: #EDF3EE;  /* soft mint: recommended, badges, accents */
+      --fg: #1E3328;            /* forest green: all text on cream */
+      --fg-muted: #597868;      /* muted sage green: secondary text */
+      --accent: #1E3328;        /* deep forest green: CTAs, emphasis, links */
+      --accent-hover: #597868;  /* sage green: CTA hover */
+      --accent-light: #EDF3EE;  /* light mint: tinted backgrounds */
+      --border: #E2DFD6;        /* warm greige: dividers */
+      --nav-bg: #1E3328;        /* deep forest green: nav, dark strips */
+      --nav-fg: #FAF6F0;        /* cream on dark green */
+      --text-xs: 13px;
+      --text-sm: 16px;
+      --text-base: 18px;
+      --text-md: 21px;
+      --text-lg: 28px;
+      --text-xl: 37px;
+      --text-2xl: 49px;
+      --s1: 8px;
+      --s2: 16px;
+      --s3: 24px;
+      --s4: 32px;
+      --s5: 48px;
+      --s6: 64px;
+      --s7: 96px;
+      --radius-sm: 4px;
+      --radius: 8px;
+      --radius-lg: 16px;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --dur: 220ms;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', system-ui, sans-serif; font-size: var(--text-base); line-height: 1.6; color: var(--fg); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    a { color: var(--fg-muted); text-decoration: none; transition: color var(--dur) var(--ease); }
+    a:hover { color: var(--fg); text-decoration: underline; }
+    .container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 var(--s5); }
+    @media (max-width: 640px) { .container { padding: 0 var(--s3); } }
+
+    /* NAV */
+    .site-nav { background: var(--nav-bg); padding: var(--s3) 0; position: sticky; top: 0; z-index: 100; }
+    .site-nav .inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo-link { display: flex; align-items: center; text-decoration: none; }
+    .site-logo { height: 32px; width: auto; display: block; transition: opacity var(--dur) var(--ease); }
+    .logo-link:hover .site-logo { opacity: 0.85; }
+    .wordmark { font-family: 'DM Sans', system-ui, sans-serif; font-size: var(--text-base); font-weight: 600; color: var(--nav-fg); letter-spacing: 0.08em; text-transform: uppercase; }
+    .wordmark span { color: var(--fg-muted); }
+    .nav-cta { background: var(--fg-muted); color: #fff; font-size: var(--text-sm); font-weight: 600; padding: var(--s1) var(--s3); border-radius: 50px; border: 1.5px solid var(--fg-muted); transition: all var(--dur) var(--ease); }
+    .nav-cta:hover { background: transparent; color: var(--nav-fg); text-decoration: none; }
+
+    /* HERO */
+    .hero { padding: var(--s7) 0 var(--s6); }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s6); align-items: start; }
+    @media (max-width: 768px) { .hero-grid { grid-template-columns: 1fr; } .hero-image { display: none; } }
+    .hero-eyebrow { display: block; color: var(--fg-muted); margin-bottom: var(--s2); font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .display { font-family: 'Fraunces', Georgia, serif; font-size: var(--text-2xl); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+    .hero h1 { margin-bottom: var(--s3); }
+    .hero-sub { color: var(--fg-muted); font-size: var(--text-md); line-height: 1.6; max-width: 52ch; margin-bottom: var(--s4); }
+    .hero-sig { font-family: 'DM Sans', sans-serif; font-size: var(--text-sm); font-style: italic; color: var(--fg-muted); margin-top: var(--s1); }
+    .hero-image { background: var(--surface-sand); border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* TABS */
+    .tabs-section { padding: var(--s6) 0 var(--s7); }
+    .tab-bar-wrapper {
+      display: flex;
+      justify-content: flex-start; /* Left aligned to match the content below */
+      margin-bottom: var(--s5);
+      width: 100%;
+    }
+    .tab-bar {
+      display: inline-flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg); /* Rounded corners matching cards */
+      padding: 6px;
+      gap: 4px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .tab-bar::-webkit-scrollbar {
+      display: none;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--fg-muted);
+      padding: var(--s2) var(--s4);
+      border-radius: 10px; /* Nesting rounded corner inside tab track */
+      transition: all var(--dur) var(--ease);
+      white-space: nowrap;
+      outline: none;
+    }
+    .tab-btn:hover {
+      color: var(--fg);
+    }
+    .tab-btn.active {
+      background: var(--fg);
+      color: var(--bg);
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(30, 51, 40, 0.15);
+    }
+    
+    /* Unified Tab Content Card */
+    .tab-container-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px; /* Matches branding layout */
+      padding: var(--s5);
+      box-shadow: 0 10px 40px rgba(30, 51, 40, 0.03);
+    }
+    @media (max-width: 640px) {
+      .tab-container-card {
+        padding: var(--s3);
+        border-radius: 16px;
+      }
+    }
+    
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .tab-intro { max-width: 65ch; margin-bottom: var(--s5); }
+    .tab-intro h2 { font-family: 'Fraunces', Georgia, serif; font-size: var(--text-xl); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: var(--s2); }
+    .tab-intro p { color: var(--fg-muted); }
+
+    /* POSES SECTION (FULL-WIDTH PANEL & HORIZONTAL TRACK) */
+    .poses-layout {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s4);
+      width: 100%;
+    }
+    .pose-selector-track {
+      display: flex;
+      gap: var(--s2);
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: var(--s2) 0;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Hide Firefox scrollbar */
+      -ms-overflow-style: none; /* Hide IE scrollbar */
+    }
+    .pose-selector-track::-webkit-scrollbar {
+      display: none; /* Hide Chrome/Safari scrollbar */
+    }
+    .pose-selector-card {
+      flex: 0 0 130px; /* fixed width for thumbnails */
+      background: transparent;
+      border: none; /* Removed the card border */
+      border-radius: var(--radius);
+      padding: 6px; /* Reduced padding to make the image as big as the card */
+      display: flex;
+      flex-direction: column;
+      gap: var(--s1);
+      align-items: center;
+      cursor: pointer;
+      transition: all var(--dur) var(--ease);
+      outline: none;
+    }
+    .pose-selector-card:hover {
+      background: var(--surface-alt); /* Subtle cream accent on hover */
+      transform: translateY(-2px);
+    }
+    .pose-selector-card.active {
+      background: var(--surface-alt); /* Cream accent highlight */
+      box-shadow: none; /* Removed active shadow */
+    }
+    .pose-selector-card img {
+      width: 100%;
+      aspect-ratio: 1.25;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      background: var(--bg);
+      border: none; /* Removed the border around the source image */
+    }
+    .pose-selector-name {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--fg);
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      margin-top: 2px;
+    }
+    .pose-details-pane {
+      width: 100%;
+      margin-top: var(--s3);
+    }
+    .pose-detail-card {
+      display: none;
+      /* Background, border, and shadow stripped since it is contained inside the tab card */
+    }
+    .pose-detail-card.active {
+      display: block;
+      animation: fadeIn var(--dur) var(--ease);
+    }
+    .pose-detail-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: var(--s5);
+      align-items: start;
+    }
+    .pose-detail-image-sec {
+      width: 100%;
+      aspect-ratio: 1.25;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .pose-detail-image-sec img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .pose-detail-info-sec {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s3);
+    }
+    .pose-detail-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: var(--s2);
+    }
+    .pose-detail-english {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--fg);
+    }
+    .pose-detail-sanskrit {
+      font-size: var(--text-xs);
+      color: var(--fg-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-top: 4px;
+    }
+    .pose-detail-body {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s2);
+    }
+    .pose-row { padding: var(--s2) 0; border-bottom: 1px solid var(--border); }
+    .pose-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .pose-row-label { font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--fg-muted); margin-bottom: 4px; }
+    .pose-row-text { font-size: var(--text-sm); color: var(--fg); line-height: 1.55; }
+    .beginner-note { margin-top: var(--s2); background: var(--accent-light); border-radius: var(--radius); padding: var(--s2) var(--s3); }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 868px) {
+      .pose-detail-grid { grid-template-columns: 1fr; gap: var(--s4); }
+    }
+
+    /* CLASSES */
+    .classes-list { display: flex; flex-direction: column; gap: var(--s3); }
+    .class-card {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      border-radius: 0;
+      padding: var(--s4) 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--s3);
+      align-items: start;
+      transition: all var(--dur) var(--ease);
+    }
+    .class-card:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .class-card.recommended {
+      background: var(--surface-sand);
+      border-left: 4px solid var(--fg-muted);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      margin: var(--s2) 0;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+    }
+    @media (max-width: 640px) {
+      .class-card {
+        grid-template-columns: 1fr;
+        padding: var(--s3) 0;
+      }
+      .class-card.recommended {
+        padding: var(--s3);
+      }
+    }
+    .class-rec-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--fg); color: var(--nav-fg); font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; padding: 4px var(--s2); border-radius: 100px; margin-bottom: var(--s2); }
+    .class-title { font-family: 'Fraunces', Georgia, serif; font-size: var(--text-md); font-weight: 600; margin-bottom: 4px; }
+    .class-time { font-size: var(--text-xs); color: var(--fg-muted); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: var(--s2); }
+    .class-desc { font-size: var(--text-sm); color: var(--fg-muted); line-height: 1.6; max-width: 60ch; }
+    .class-best-for { margin-top: var(--s2); font-size: var(--text-sm); color: var(--fg); }
+    .class-best-for strong { font-weight: 600; }
+    .class-level { display: flex; flex-direction: column; align-items: flex-end; gap: var(--s1); }
+    .level-dots { display: flex; gap: 5px; }
+    .level-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
+    .level-dot.filled { background: var(--fg-muted); }
+    .level-label { font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--fg-muted); white-space: nowrap; }
+    .classes-cta { margin-top: var(--s5); background: var(--nav-bg); border-radius: var(--radius-lg); padding: var(--s5); display: flex; align-items: center; justify-content: space-between; gap: var(--s4); }
+    @media (max-width: 640px) { .classes-cta { flex-direction: column; align-items: flex-start; } }
+    .classes-cta p { font-family: 'Fraunces', Georgia, serif; font-size: var(--text-lg); color: var(--nav-fg); font-weight: 400; line-height: 1.3; max-width: 45ch; }
+    .classes-cta p em { color: var(--surface-sand); font-style: normal; font-weight: 600; }
+    .btn-primary { display: inline-flex; align-items: center; gap: var(--s1); background: var(--accent); color: #fff; font-size: var(--text-base); font-weight: 600; padding: var(--s2) var(--s4); border-radius: 50px; border: 1.5px solid var(--accent); white-space: nowrap; transition: all var(--dur) var(--ease); }
+    .btn-primary:hover { background: transparent; color: var(--accent); text-decoration: none; }
+    .btn-secondary { display: inline-flex; align-items: center; gap: var(--s1); background: transparent; color: var(--fg); border: 1.5px solid var(--fg); font-size: var(--text-base); font-weight: 500; padding: var(--s2) var(--s4); border-radius: 50px; white-space: nowrap; transition: all var(--dur) var(--ease); }
+    .btn-secondary:hover { background: var(--fg); color: #fff; text-decoration: none; }
+
+    /* BEFORE YOU COME */
+    .prep-sections { display: flex; flex-direction: column; gap: var(--s5); }
+    .prep-block { border-left: 3px solid var(--fg-muted); padding-left: var(--s4); }
+    .prep-block h3 { font-family: 'Fraunces', Georgia, serif; font-size: var(--text-lg); font-weight: 600; line-height: 1.15; margin-bottom: var(--s2); }
+    .prep-list { list-style: none; display: flex; flex-direction: column; gap: var(--s2); margin-top: var(--s3); }
+    .prep-list li { display: flex; gap: var(--s2); align-items: flex-start; }
+    .prep-list li .ico { font-size: 18px; margin-top: 2px; flex-shrink: 0; }
+    .prep-list li .txt { font-size: var(--text-base); line-height: 1.55; }
+    .prep-list li .txt strong { font-weight: 600; }
+    .objections-list { display: flex; flex-direction: column; gap: var(--s3); margin-top: var(--s3); }
+    .objection {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      border-radius: 0;
+      padding: var(--s3) 0;
+    }
+    .objection:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .objection .q { font-weight: 600; font-size: var(--text-base); margin-bottom: var(--s1); }
+    .objection .a { font-size: var(--text-sm); color: var(--fg-muted); line-height: 1.6; }
+    .one-rule { background: var(--nav-bg); border-radius: var(--radius-lg); padding: var(--s5); text-align: center; }
+    .one-rule p { font-family: 'Fraunces', Georgia, serif; font-size: var(--text-xl); font-style: italic; color: var(--nav-fg); line-height: 1.25; max-width: 38ch; margin: 0 auto; font-weight: 400; }
+    .one-rule p em { color: var(--surface-sand); font-style: italic; font-weight: 600; }
+
+    /* FOOTER */
+    .guide-footer { background: var(--surface-alt); border-top: 1px solid var(--border); padding: var(--s6) 0; }
+    .footer-inner { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s6); align-items: center; }
+    @media (max-width: 768px) { .footer-inner { grid-template-columns: 1fr; } }
+    .footer-sign-off { font-family: 'Fraunces', Georgia, serif; font-size: var(--text-lg); line-height: 1.35; color: var(--fg); font-style: italic; font-weight: 400; }
+    .footer-sign-off em { display: block; font-size: var(--text-sm); font-family: 'DM Sans', sans-serif; font-style: normal; color: var(--fg-muted); margin-top: var(--s2); }
+    .footer-actions { display: flex; flex-direction: column; gap: var(--s2); align-items: flex-start; }
+    @media (min-width: 769px) { .footer-actions { align-items: flex-end; } }
+    .footer-note { font-size: var(--text-xs); color: var(--fg-muted); margin-top: var(--s1); }
+    .footer-brand { border-top: 1px solid var(--border); padding-top: var(--s4); margin-top: var(--s5); display: flex; align-items: center; justify-content: space-between; gap: var(--s3); flex-wrap: wrap; }
+    .footer-brand .wm { font-family: 'DM Sans', system-ui, sans-serif; font-size: var(--text-sm); font-weight: 600; color: var(--fg); letter-spacing: 0.08em; text-transform: uppercase; }
+    .footer-brand .wm span { color: var(--fg-muted); }
+    .caption { font-size: var(--text-xs); color: var(--fg-muted); }
+
+    /* OFFER STRIP */
+    .offer-strip { padding: var(--s7) 0; background: var(--bg); border-top: 1px solid var(--border); }
+    .offer-inner { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s7); align-items: center; }
+    @media (max-width: 768px) { .offer-inner { grid-template-columns: 1fr; gap: var(--s5); } }
+    .offer-eyebrow { font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--fg-muted); margin-bottom: var(--s2); }
+    .offer-headline { font-family: 'Fraunces', Georgia, serif; font-size: var(--text-2xl); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: var(--fg); margin-bottom: var(--s4); }
+    .offer-body { font-size: var(--text-md); color: var(--fg-muted); line-height: 1.65; max-width: 48ch; margin-bottom: var(--s3); }
+    .offer-body:last-of-type { margin-bottom: 0; }
+    .offer-card { background: var(--nav-bg); border-radius: var(--radius-lg); padding: var(--s5); color: var(--nav-fg); }
+    .offer-price-block { margin-bottom: var(--s4); }
+    .offer-was { font-size: var(--text-sm); color: var(--surface-sand); text-decoration: line-through; opacity: 0.7; margin-bottom: var(--s1); }
+    .offer-now { font-family: 'Fraunces', Georgia, serif; font-size: 3.5rem; font-weight: 700; line-height: 1; color: var(--nav-fg); }
+    .offer-period { font-family: 'DM Sans', sans-serif; font-size: var(--text-sm); font-weight: 400; opacity: 0.7; margin-left: 4px; }
+    .offer-includes { list-style: none; display: flex; flex-direction: column; gap: var(--s2); margin-bottom: var(--s5); }
+    .offer-includes li { font-size: var(--text-sm); color: var(--nav-fg); opacity: 0.9; padding-left: var(--s3); position: relative; }
+    .offer-includes li::before { content: '✓'; position: absolute; left: 0; color: var(--surface-sand); font-weight: 600; }
+    .btn-offer { display: inline-flex; align-items: center; justify-content: center; width: 100%; background: var(--nav-fg); color: var(--fg); font-size: var(--text-base); font-weight: 600; padding: var(--s3) var(--s4); border-radius: 50px; border: none; white-space: nowrap; transition: all var(--dur) var(--ease); text-decoration: none; }
+    .btn-offer:hover { background: var(--surface-sand); color: var(--fg); text-decoration: none; }
+    .offer-small { font-size: var(--text-xs); color: var(--nav-fg); opacity: 0.5; text-align: center; margin-top: var(--s2); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="container inner">
+    <a href="https://www.wellnestkirkstall.co.uk/" class="logo-link" target="_blank" rel="noopener">
+      <img src="wellnest-logo.webp" alt="WellNest Kirkstall" class="site-logo" />
+    </a>
+    <a href="#intro-offer" class="nav-cta">Half-price intro</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow">Free guide from Harriet</div>
+        <h1 class="display">Your first guide<br>to yoga.</h1>
+        <p class="hero-sub">If you've been meaning to try yoga for a while (maybe longer than you'd like to admit), this is where you start. Eleven poses, nine classes, and answers to the questions you'd feel a bit awkward asking on day one.</p>
+        <p class="hero-sig">From Harriet King, founder and teacher, WellNest Kirkstall</p>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <img src="studio-photo.jpg" alt="Harriet King assisting a student on a yoga mat" />
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- TABS -->
+<main class="tabs-section">
+  <div class="container">
+
+    <div class="tab-bar-wrapper">
+      <div class="tab-bar" role="tablist">
+        <button class="tab-btn active" role="tab" aria-selected="true"  id="btn-poses"   onclick="switchTab('poses')">Poses</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" id="btn-classes" onclick="switchTab('classes')">Classes</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" id="btn-prep"    onclick="switchTab('prep')">Before you come</button>
+      </div>
+    </div>
+
+    <div class="tab-container-card">
+      <!-- TAB: POSES -->
+      <div class="tab-panel active" id="tab-poses">
+      <div class="tab-intro">
+        <h2>The poses you'll meet</h2>
+        <p>These are the shapes that appear in almost every WellNest class. Select a pose to see its details, where you'll feel it, and (most importantly) what to do if it feels like too much.</p>
+      </div>
+      
+      <!-- Top: Horizontal Scrollable Selector Track -->
+      <div class="pose-selector-track" role="tablist">
+        <button class="pose-selector-card active" data-pose-id="pose-mountain" onclick="selectPose('mountain')">
+          <img src="poses/pose_mountain.png" alt="Mountain Pose Preview" />
+          <span class="pose-selector-name">Mountain Pose</span>
+        </button>
+        <button class="pose-selector-card" data-pose-id="pose-child" onclick="selectPose('child')">
+          <img src="poses/pose_child.png" alt="Child's Pose Preview" />
+          <span class="pose-selector-name">Child's Pose</span>
+        </button>
+        <button class="pose-selector-card" data-pose-id="pose-downdog" onclick="selectPose('downdog')">
+          <img src="poses/pose_downdog.png" alt="Downward-Facing Dog Preview" />
+          <span class="pose-selector-name">Downward Dog</span>
+        </button>
+        <button class="pose-selector-card" data-pose-id="pose-cobra" onclick="selectPose('cobra')">
+          <img src="poses/pose_cobra.png" alt="Cobra Pose Preview" />
+          <span class="pose-selector-name">Cobra Pose</span>
+        </button>
+        <button class="pose-selector-card" data-pose-id="pose-warrior1" onclick="selectPose('warrior1')">
+          <img src="poses/pose_warrior1.png" alt="Warrior I Preview" />
+          <span class="pose-selector-name">Warrior I</span>
+        </button>
+        <button class="pose-selector-card" data-pose-id="pose-warrior2" onclick="selectPose('warrior2')">
+          <img src="poses/pose_warrior2.png" alt="Warrior II Preview" />
+          <span class="pose-selector-name">Warrior II</span>
+        </button>
+        <button class="pose-selector-card" data-pose-id="pose-catcow" onclick="selectPose('catcow')">
+          <img src="poses/pose_catcow.png" alt="Cat / Cow Preview" />
+          <span class="pose-selector-name">Cat / Cow</span>
+        </button>
+        <button class="pose-selector-card" data-pose-id="pose-tree" onclick="selectPose('tree')">
+          <img src="poses/pose_tree.png" alt="Tree Pose Preview" />
+          <span class="pose-selector-name">Tree Pose</span>
+        </button>
+        <button class="pose-selector-card" data-pose-id="pose-fwdfold" onclick="selectPose('fwdfold')">
+          <img src="poses/pose_fwdfold.png" alt="Seated Forward Fold Preview" />
+          <span class="pose-selector-name">Forward Fold</span>
+        </button>
+        <button class="pose-selector-card" data-pose-id="pose-pigeon" onclick="selectPose('pigeon')">
+          <img src="poses/pose_pigeon.png" alt="Pigeon Pose Preview" />
+          <span class="pose-selector-name">Pigeon Pose</span>
+        </button>
+        <button class="pose-selector-card" data-pose-id="pose-savasana" onclick="selectPose('savasana')">
+          <img src="poses/pose_savasana.png" alt="Savasana Preview" />
+          <span class="pose-selector-name">Savasana</span>
+        </button>
+      </div>
+
+      <!-- Bottom: Detail Cards Container (Full-Width) -->
+      <div class="pose-details-pane">
+        <!-- Card: Mountain Pose -->
+        <article class="pose-detail-card active" id="pose-mountain">
+          <div class="pose-detail-grid">
+            <div class="pose-detail-image-sec">
+              <img src="poses/pose_mountain.png" alt="Mountain Pose Illustration" />
+            </div>
+            <div class="pose-detail-info-sec">
+              <div class="pose-detail-header">
+                <h3 class="pose-detail-english">Mountain Pose</h3>
+                <span class="pose-detail-sanskrit">Tadasana</span>
+              </div>
+              <div class="pose-detail-body">
+                <div class="pose-row">
+                  <div class="pose-row-label">What it is</div>
+                  <div class="pose-row-text">You stand. Feet together or hip-width apart, arms at your sides, weight evenly through both feet. The foundation almost everything else grows from.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">Where you feel it</div>
+                  <div class="pose-row-text">Feet, legs, and core, particularly if you actually engage them. Most people stand in Mountain Pose without noticing how much is going on.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">What it's good for</div>
+                  <div class="pose-row-text">Posture and body awareness. It teaches you how you actually hold yourself, and that knowledge carries into the rest of your day.</div>
+                </div>
+                <div class="beginner-note">
+                  <div class="pose-row-label">Beginner note</div>
+                  <div class="pose-row-text">There's nowhere to go wrong here. Breathe. That's it.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Child's Pose -->
+        <article class="pose-detail-card" id="pose-child">
+          <div class="pose-detail-grid">
+            <div class="pose-detail-image-sec">
+              <img src="poses/pose_child.png" alt="Child's Pose Illustration" />
+            </div>
+            <div class="pose-detail-info-sec">
+              <div class="pose-detail-header">
+                <h3 class="pose-detail-english">Child's Pose</h3>
+                <span class="pose-detail-sanskrit">Balasana</span>
+              </div>
+              <div class="pose-detail-body">
+                <div class="pose-row">
+                  <div class="pose-row-label">What it is</div>
+                  <div class="pose-row-text">You kneel, fold your torso forward over your thighs, and rest your forehead on the mat. Arms stretch forward or rest by your sides.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">Where you feel it</div>
+                  <div class="pose-row-text">Lower back, hips, and shoulders. One of the most genuinely restorative shapes in yoga.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">What it's good for</div>
+                  <div class="pose-row-text">Rest. Regulation. A pause. The nervous system takes it as a signal to slow down. Teachers at WellNest will offer it regularly, so you can take it whenever you need it.</div>
+                </div>
+                <div class="beginner-note">
+                  <div class="pose-row-label">Beginner note</div>
+                  <div class="pose-row-text">At WellNest, Child's Pose is always available. "Child's pose is welcome at any time." The teachers mean it, every single class.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Down Dog -->
+        <article class="pose-detail-card" id="pose-downdog">
+          <div class="pose-detail-grid">
+            <div class="pose-detail-image-sec">
+              <img src="poses/pose_downdog.png" alt="Downward-Facing Dog Illustration" />
+            </div>
+            <div class="pose-detail-info-sec">
+              <div class="pose-detail-header">
+                <h3 class="pose-detail-english">Downward-Facing Dog</h3>
+                <span class="pose-detail-sanskrit">Adho Mukha Svanasana</span>
+              </div>
+              <div class="pose-detail-body">
+                <div class="pose-row">
+                  <div class="pose-row-label">What it is</div>
+                  <div class="pose-row-text">Hands and feet on the mat, hips lifted high so your body forms an inverted V. You'll do this in almost every vinyasa class.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">Where you feel it</div>
+                  <div class="pose-row-text">Backs of the legs, calves, shoulders, and wrists. A lot is happening at once, which is exactly why it's used so often.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">What it's good for</div>
+                  <div class="pose-row-text">Full-body stretch and mild inversion. Decompresses the spine and brings fresh blood to the head. Teachers often use it as a rest between sequences.</div>
+                </div>
+                <div class="beginner-note">
+                  <div class="pose-row-label">Beginner note</div>
+                  <div class="pose-row-text">Bent knees are completely fine. You're trying to lengthen your spine, not get your heels on the floor. Those are different things.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Cobra -->
+        <article class="pose-detail-card" id="pose-cobra">
+          <div class="pose-detail-grid">
+            <div class="pose-detail-image-sec">
+              <img src="poses/pose_cobra.png" alt="Cobra Pose Illustration" />
+            </div>
+            <div class="pose-detail-info-sec">
+              <div class="pose-detail-header">
+                <h3 class="pose-detail-english">Cobra Pose</h3>
+                <span class="pose-detail-sanskrit">Bhujangasana</span>
+              </div>
+              <div class="pose-detail-body">
+                <div class="pose-row">
+                  <div class="pose-row-label">What it is</div>
+                  <div class="pose-row-text">Lie face down, hands under your shoulders, lift your chest off the mat. Elbows stay slightly bent.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">Where you feel it</div>
+                  <div class="pose-row-text">Lower back and chest opening. For people who spend the day at a desk, this is one of the most important shapes in the practice.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">What it's good for</div>
+                  <div class="pose-row-text">Counteracting the forward-fold of a working day. Strengthens the back, opens the front body.</div>
+                </div>
+                <div class="beginner-note">
+                  <div class="pose-row-label">Beginner note</div>
+                  <div class="pose-row-text">Low Cobra (lifting just a few inches) is often more useful than a big backbend. Come up only as far as your back invites you.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Warrior I -->
+        <article class="pose-detail-card" id="pose-warrior1">
+          <div class="pose-detail-grid">
+            <div class="pose-detail-image-sec">
+              <img src="poses/pose_warrior1.png" alt="Warrior I Illustration" />
+            </div>
+            <div class="pose-detail-info-sec">
+              <div class="pose-detail-header">
+                <h3 class="pose-detail-english">Warrior I</h3>
+                <span class="pose-detail-sanskrit">Virabhadrasana I</span>
+              </div>
+              <div class="pose-detail-body">
+                <div class="pose-row">
+                  <div class="pose-row-label">What it is</div>
+                  <div class="pose-row-text">A lunge with the back foot turned out at 45 degrees, hips facing forward, arms lifted overhead. Strong. Grounded.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">Where you feel it</div>
+                  <div class="pose-row-text">Front thigh, hip flexors, and through the whole back leg. You'll feel your core working to keep the hips square.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">What it's good for</div>
+                  <div class="pose-row-text">Leg strength and hip flexibility. A satisfying pose to land in once you find your balance.</div>
+                </div>
+                <div class="beginner-note">
+                  <div class="pose-row-label">Beginner note</div>
+                  <div class="pose-row-text">Don't worry about perfect alignment on day one. Find stability first. The refinement comes over weeks, not minutes.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Warrior II -->
+        <article class="pose-detail-card" id="pose-warrior2">
+          <div class="pose-detail-grid">
+            <div class="pose-detail-image-sec">
+              <img src="poses/pose_warrior2.png" alt="Warrior II Illustration" />
+            </div>
+            <div class="pose-detail-info-sec">
+              <div class="pose-detail-header">
+                <h3 class="pose-detail-english">Warrior II</h3>
+                <span class="pose-detail-sanskrit">Virabhadrasana II</span>
+              </div>
+              <div class="pose-detail-body">
+                <div class="pose-row">
+                  <div class="pose-row-label">What it is</div>
+                  <div class="pose-row-text">Like Warrior I, but your hips and arms open wide to the sides, front knee bent over front ankle, gaze over your front fingers.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">Where you feel it</div>
+                  <div class="pose-row-text">Inner thighs, outer hips, and shoulders. It looks powerful because it is.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">What it's good for</div>
+                  <div class="pose-row-text">Strengthening the legs, opening the hips, building stamina. Common in Vinyasa and Hatha classes.</div>
+                </div>
+                <div class="beginner-note">
+                  <div class="pose-row-label">Beginner note</div>
+                  <div class="pose-row-text">Check that your front knee tracks over your second toe, not collapsing inward. Your teacher will cue this.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Cat/Cow -->
+        <article class="pose-detail-card" id="pose-catcow">
+          <div class="pose-detail-grid">
+            <div class="pose-detail-image-sec">
+              <img src="poses/pose_catcow.png" alt="Cat / Cow Illustration" />
+            </div>
+            <div class="pose-detail-info-sec">
+              <div class="pose-detail-header">
+                <h3 class="pose-detail-english">Cat / Cow</h3>
+                <span class="pose-detail-sanskrit">Marjaryasana / Bitilasana</span>
+              </div>
+              <div class="pose-detail-body">
+                <div class="pose-row">
+                  <div class="pose-row-label">What it is</div>
+                  <div class="pose-row-text">On hands and knees, you alternate between arching your back downward (Cow, inhale) and rounding it up toward the ceiling (Cat, exhale). One of the first things you'll do in most classes.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">Where you feel it</div>
+                  <div class="pose-row-text">The whole length of the spine, from tailbone to neck. Very satisfying if you've been sitting all day.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">What it's good for</div>
+                  <div class="pose-row-text">Waking up spinal mobility, linking breath to movement, warming up the body gently before anything demanding.</div>
+                </div>
+                <div class="beginner-note">
+                  <div class="pose-row-label">Beginner note</div>
+                  <div class="pose-row-text">Move slowly. There's no version of this that's wrong if it feels good in your back.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Tree Pose -->
+        <article class="pose-detail-card" id="pose-tree">
+          <div class="pose-detail-grid">
+            <div class="pose-detail-image-sec">
+              <img src="poses/pose_tree.png" alt="Tree Pose Illustration" />
+            </div>
+            <div class="pose-detail-info-sec">
+              <div class="pose-detail-header">
+                <h3 class="pose-detail-english">Tree Pose</h3>
+                <span class="pose-detail-sanskrit">Vrksasana</span>
+              </div>
+              <div class="pose-detail-body">
+                <div class="pose-row">
+                  <div class="pose-row-label">What it is</div>
+                  <div class="pose-row-text">Stand on one foot, place the sole of the other foot against your inner calf or thigh (never the knee), arms rise or press at heart centre.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">Where you feel it</div>
+                  <div class="pose-row-text">The standing foot and ankle, inner thigh of the bent leg, core. Balance poses are deceptively tiring.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">What it's good for</div>
+                  <div class="pose-row-text">Balance, focus, and the kind of concentration that leaves no room for anything else.</div>
+                </div>
+                <div class="beginner-note">
+                  <div class="pose-row-label">Beginner note</div>
+                  <div class="pose-row-text">Wobbling is fine: it's a sign your stabilisers are working. Keep a soft gaze on one spot on the floor.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Seated Forward Fold -->
+        <article class="pose-detail-card" id="pose-fwdfold">
+          <div class="pose-detail-grid">
+            <div class="pose-detail-image-sec">
+              <img src="poses/pose_fwdfold.png" alt="Seated Forward Fold Illustration" />
+            </div>
+            <div class="pose-detail-info-sec">
+              <div class="pose-detail-header">
+                <h3 class="pose-detail-english">Seated Forward Fold</h3>
+                <span class="pose-detail-sanskrit">Paschimottanasana</span>
+              </div>
+              <div class="pose-detail-body">
+                <div class="pose-row">
+                  <div class="pose-row-label">What it is</div>
+                  <div class="pose-row-text">Sit with legs extended, then hinge from the hips to fold forward. Hands go wherever they reach: feet, shins, or a strap.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">Where you feel it</div>
+                  <div class="pose-row-text">Hamstrings, lower back, and calves. If you sit at a desk, these will be tight. Entirely normal.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">What it's good for</div>
+                  <div class="pose-row-text">Deep hamstring release and calming the nervous system. Core of most yin and restorative classes.</div>
+                </div>
+                <div class="beginner-note">
+                  <div class="pose-row-label">Beginner note</div>
+                  <div class="pose-row-text">Bent knees are fine. A strap around your feet is good technique. Fold from the hips, not the middle of your back.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Pigeon Pose -->
+        <article class="pose-detail-card" id="pose-pigeon">
+          <div class="pose-detail-grid">
+            <div class="pose-detail-image-sec">
+              <img src="poses/pose_pigeon.png" alt="Pigeon Pose Illustration" />
+            </div>
+            <div class="pose-detail-info-sec">
+              <div class="pose-detail-header">
+                <h3 class="pose-detail-english">Pigeon Pose</h3>
+                <span class="pose-detail-sanskrit">Eka Pada Rajakapotasana</span>
+              </div>
+              <div class="pose-detail-body">
+                <div class="pose-row">
+                  <div class="pose-row-label">What it is</div>
+                  <div class="pose-row-text">From Downward Dog, one knee comes forward toward the same-side wrist, the back leg extends behind. You can stay upright or fold forward over the front leg.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">Where you feel it</div>
+                  <div class="pose-row-text">Outer hip of the front leg, and hip flexor of the back. Many people find this intense. That's by design.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">What it's good for</div>
+                  <div class="pose-row-text">Deep hip release. If you carry stress in your hips (which most people do), Pigeon is where you'll feel it.</div>
+                </div>
+                <div class="beginner-note">
+                  <div class="pose-row-label">Beginner note</div>
+                  <div class="pose-row-text">Support your hip with a blanket if it doesn't reach the floor. Sharp pain means stop. A deep, sustained ache means stay and breathe into it.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Savasana -->
+        <article class="pose-detail-card" id="pose-savasana">
+          <div class="pose-detail-grid">
+            <div class="pose-detail-image-sec">
+              <img src="poses/pose_savasana.png" alt="Savasana Illustration" />
+            </div>
+            <div class="pose-detail-info-sec">
+              <div class="pose-detail-header">
+                <h3 class="pose-detail-english">Savasana</h3>
+                <span class="pose-detail-sanskrit">Corpse Pose</span>
+              </div>
+              <div class="pose-detail-body">
+                <div class="pose-row">
+                  <div class="pose-row-label">What it is</div>
+                  <div class="pose-row-text">You lie flat on your back, arms slightly away from your sides, eyes closed, and do nothing. Every class ends here. It lasts 5–10 minutes.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">Where you feel it</div>
+                  <div class="pose-row-text">Everywhere and nowhere. The body settles. Many people find this the hardest part, particularly in the first few classes.</div>
+                </div>
+                <div class="pose-row">
+                  <div class="pose-row-label">What it's good for</div>
+                  <div class="pose-row-text">Integration. The nervous system needs time to absorb what the practice has done. Skipping Savasana is like having a bath and not towelling dry.</div>
+                </div>
+                <div class="beginner-note">
+                  <div class="pose-row-label">Beginner note</div>
+                  <div class="pose-row-text">If lying still feels impossible, that's completely normal. It gets easier. Your mind will wander. Just notice it and come back.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- TAB: CLASSES -->
+    <div class="tab-panel" id="tab-classes">
+      <div class="tab-intro">
+        <h2>Which class is yours</h2>
+        <p>Every class at WellNest is taught with beginners in the room. Here's how to find your starting point.</p>
+      </div>
+      <div class="classes-list">
+
+        <article class="class-card recommended">
+          <div class="class-info">
+            <div class="class-rec-badge">★ Start here</div>
+            <div class="class-title">Candlelit Restorative</div>
+            <div class="class-time">Monday · 7:30pm · with Harriet</div>
+            <p class="class-desc">Restorative yoga uses props to hold you in supported shapes so your nervous system can finally settle. Harriet holds the space quietly. You don't need to do anything except arrive. You leave noticeably softer than you came in.</p>
+            <p class="class-best-for"><strong>Best if you:</strong> want to slow down, struggle to switch off, or haven't done yoga before.</p>
+          </div>
+          <div class="class-level">
+            <div class="level-dots"><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div></div>
+            <div class="level-label">Gentle</div>
+          </div>
+        </article>
+
+        <article class="class-card recommended">
+          <div class="class-info">
+            <div class="class-rec-badge">★ Start here</div>
+            <div class="class-title">Gentle Hatha Flow</div>
+            <div class="class-time">Wednesday · 6:45pm · with Harriet</div>
+            <p class="class-desc">Poses held long enough to feel something, transitions slow enough to stay present. Harriet focuses on alignment, finding the version of each shape that works for your body. No experience needed.</p>
+            <p class="class-best-for"><strong>Best if you:</strong> want to understand what you're doing before moving faster.</p>
+          </div>
+          <div class="class-level">
+            <div class="level-dots"><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div></div>
+            <div class="level-label">Gentle</div>
+          </div>
+        </article>
+
+        <article class="class-card">
+          <div class="class-info">
+            <div class="class-title">Slow Flow Vinyasa</div>
+            <div class="class-time">Tuesday · 5:45pm · with Lucy</div>
+            <p class="class-desc">The slower pace asks more of your attention. Lucy moves you through postures deliberately, giving you time to feel what's happening. Pre- and postnatal trained.</p>
+            <p class="class-best-for"><strong>Best if you:</strong> want movement with breath, but aren't ready for a fast flow.</p>
+          </div>
+          <div class="class-level">
+            <div class="level-dots"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div></div>
+            <div class="level-label">Accessible</div>
+          </div>
+        </article>
+
+        <article class="class-card">
+          <div class="class-info">
+            <div class="class-title">Embodied Yoga Flow</div>
+            <div class="class-time">Thursday · 5:30pm · with Carly</div>
+            <p class="class-desc">Slow, fluid sequences, not to achieve a shape, but to feel what's there when you stop rushing. Quieter than most flow classes. Curiosity is the only requirement.</p>
+            <p class="class-best-for"><strong>Best if you:</strong> want something introspective and unhurried.</p>
+          </div>
+          <div class="class-level">
+            <div class="level-dots"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div></div>
+            <div class="level-label">Accessible</div>
+          </div>
+        </article>
+
+        <article class="class-card">
+          <div class="class-info">
+            <div class="class-title">Mindful Mobility</div>
+            <div class="class-time">Thursday · 6:45pm · with Carly</div>
+            <p class="class-desc">Yin yoga, mobility training, and breathwork combined. Long holds, gentle controlled movement. Hips, spine, and shoulders: the areas that carry the most.</p>
+            <p class="class-best-for"><strong>Best if you:</strong> feel stiff or want a more therapeutic, targeted approach.</p>
+          </div>
+          <div class="class-level">
+            <div class="level-dots"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div></div>
+            <div class="level-label">Accessible</div>
+          </div>
+        </article>
+
+        <article class="class-card">
+          <div class="class-info">
+            <div class="class-title">Pilates</div>
+            <div class="class-time">Tuesday · 7:00pm &amp; Sunday · 10:00am · with Megan</div>
+            <p class="class-desc">Deep core muscles doing precise, controlled work. Movements are layered so they build without overwhelming. You leave standing a little taller without trying.</p>
+            <p class="class-best-for"><strong>Best if you:</strong> want core strength and better posture alongside your yoga practice.</p>
+          </div>
+          <div class="class-level">
+            <div class="level-dots"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div></div>
+            <div class="level-label">Accessible</div>
+          </div>
+        </article>
+
+        <article class="class-card">
+          <div class="class-info">
+            <div class="class-title">Energising Vinyasa</div>
+            <div class="class-time">Monday · 6:15pm · with Alisia</div>
+            <p class="class-desc">Movement linked to breath, where each inhale and exhale carries you into the next shape. Alisia builds the pace gradually. You leave feeling clearer than when you walked in.</p>
+            <p class="class-best-for"><strong>Best if you:</strong> have a little yoga experience and want to move with more energy.</p>
+          </div>
+          <div class="class-level">
+            <div class="level-dots"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div></div>
+            <div class="level-label">Building</div>
+          </div>
+        </article>
+
+        <article class="class-card">
+          <div class="class-info">
+            <div class="class-title">Ashtanga Fusion</div>
+            <div class="class-time">Wednesday · 5:30pm · with Harriet</div>
+            <p class="class-desc">A physically challenging class. Enhanced circulation, strength, flexibility, and a calm mind. Modifications are always available, though we suggest coming to this one after you've tried a couple of others first.</p>
+            <p class="class-best-for"><strong>Best if you:</strong> want a real workout and have found your footing in the gentler classes.</p>
+          </div>
+          <div class="class-level">
+            <div class="level-dots"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div></div>
+            <div class="level-label">More demanding</div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="classes-cta">
+        <p>Not sure where to start? Harriet recommends the <em>Monday 7:30pm Restorative</em> for first-timers. As a guide subscriber, your first month is half price.</p>
+        <a href="#intro-offer" class="btn-primary">See the offer →</a>
+      </div>
+    </div>
+
+    <!-- TAB: BEFORE YOU COME -->
+    <div class="tab-panel" id="tab-prep">
+      <div class="tab-intro">
+        <h2>Before your first class</h2>
+        <p>Everything you need to know so that when you walk in, nothing feels unfamiliar.</p>
+      </div>
+      <div class="prep-sections">
+
+        <div class="prep-block">
+          <h3>What to bring</h3>
+          <ul class="prep-list">
+            <li><span class="ico">🧘</span><span class="txt"><strong>A mat</strong>, or don't: WellNest provides mats, bolsters, blocks, blankets, and straps. You need to bring nothing.</span></li>
+            <li><span class="ico">💧</span><span class="txt"><strong>Water</strong>, a bottle if you have one. There's a chill-out area to leave things.</span></li>
+            <li><span class="ico">👕</span><span class="txt"><strong>Something comfortable to move in</strong>, loose or fitted, whatever you own. No specialist kit required.</span></li>
+            <li><span class="ico">🧦</span><span class="txt"><strong>Socks optional</strong>, yoga is usually barefoot, but bring socks if your feet get cold.</span></li>
+            <li><span class="ico">🍽️</span><span class="txt"><strong>A light stomach</strong>, eat something small at least an hour before. A full meal right before class is uncomfortable.</span></li>
+          </ul>
+        </div>
+
+        <div class="prep-block">
+          <h3>What to expect when you arrive</h3>
+          <ul class="prep-list">
+            <li><span class="ico">📍</span><span class="txt">WellNest is at <strong>Chantry House, Victoria Road, Kirkstall LS5 3JB</strong>, in a beautifully converted church. You'll know it when you see it.</span></li>
+            <li><span class="ico">⏰</span><span class="txt"><strong>Arrive 5 to 10 minutes early</strong> on your first visit. It gives you time to find a mat, settle in, and have a word with the teacher.</span></li>
+            <li><span class="ico">👟</span><span class="txt"><strong>Shoes off</strong> before you enter the studio space. Leave your things in the chill-out area.</span></li>
+            <li><span class="ico">🙋</span><span class="txt"><strong>Tell the teacher it's your first time.</strong> You don't have to, but if you do, they'll offer modifications and keep an eye on you.</span></li>
+            <li><span class="ico">📵</span><span class="txt"><strong>Phone on silent.</strong> One hour without it won't hurt.</span></li>
+          </ul>
+        </div>
+
+        <div class="prep-block">
+          <h3>The things people worry about</h3>
+          <div class="objections-list">
+            <div class="objection">
+              <p class="q">"I'm not flexible enough."</p>
+              <p class="a">This is the thing Harriet hears most often, and it's the wrong way round. Flexibility is what yoga gives you. It's not what you arrive with. Nobody in the room started flexible. Come as you are.</p>
+            </div>
+            <div class="objection">
+              <p class="q">"I'll be the only beginner."</p>
+              <p class="a">You won't be. And even if you were, it wouldn't matter. The class moves at its own pace. WellNest has no mirrors. Nobody is watching you.</p>
+            </div>
+            <div class="objection">
+              <p class="q">"What if I can't keep up?"</p>
+              <p class="a">There's no keeping up. The class meets you where you are. If something is too much, Child's Pose is always there. The teachers mean it every time they say it.</p>
+            </div>
+            <div class="objection">
+              <p class="q">"I keep starting and stopping. What if I quit again?"</p>
+              <p class="a">Then you come back. WellNest has members who quit at month three, came back at month nine, and are now in their fourth year. There's no starting over here. You just continue from wherever you are.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="one-rule">
+          <p>The one rule that covers everything else: <em>Child's Pose is always an option.</em> Always. No explanation needed.</p>
+        </div>
+
+      </div>
+    </div>
+
+    </div> <!-- end tab-container-card -->
+  </div>
+</main>
+
+<!-- OFFER -->
+<section class="offer-strip" id="intro-offer">
+  <div class="container">
+    <div class="offer-inner">
+
+      <div class="offer-copy">
+        <div class="offer-eyebrow">For guide subscribers</div>
+        <h2 class="offer-headline">Try the room for a month. Half price.</h2>
+        <p class="offer-body">You read the whole guide. That means you're actually thinking about coming in, and that's the bit that usually stops people. The guide was free and it stays free. If you want to try a class, your first month is half price, just for people who made it this far. No complicated reason. You put in the time, it felt like the right thing to do. Come try the room. See if it fits.</p>
+      </div>
+
+      <div class="offer-card">
+        <div class="offer-price-block">
+          <div class="offer-was">Usually £45</div>
+          <div class="offer-now">£22<span class="offer-period">/ first month</span></div>
+        </div>
+        <ul class="offer-includes">
+          <li>Unlimited classes across the full timetable</li>
+          <li>Every prop provided &mdash; no kit to buy</li>
+          <li>No contract. Cancel anytime, no email needed</li>
+          <li>Teachers who look out for new faces</li>
+        </ul>
+        <a href="https://www.wellnestkirkstall.co.uk/book-a-class" class="btn-offer" target="_blank" rel="noopener">Claim your half-price month &rarr;</a>
+        <p class="offer-small">New members only &middot; exclusive to guide subscribers</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="guide-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-sign-off">
+        "Every person in our classes started where you are right now. The mat in the corner? Everyone's started there."
+        <em>From Harriet &amp; the WellNest team xo</em>
+      </div>
+      <div class="footer-actions">
+        <a href="https://www.wellnestkirkstall.co.uk/book-a-class" class="btn-primary" target="_blank" rel="noopener">Book your first class →</a>
+        <a href="https://www.wellnestkirkstall.co.uk/pricing" class="btn-secondary" target="_blank" rel="noopener">View pricing</a>
+        <p class="footer-note">£45 intro month · unlimited classes · cancel anytime</p>
+      </div>
+    </div>
+    <div class="footer-brand">
+      <span class="wm">Well<span>Nest</span> Kirkstall</span>
+      <span class="caption">Chantry House, Victoria Road, Kirkstall, LS5 3JB · <a href="https://instagram.com/wellnestkirkstall" target="_blank" rel="noopener">@wellnestkirkstall</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function switchTab(name) {
+    document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+    document.getElementById('btn-'+name).classList.add('active');
+    document.getElementById('btn-'+name).setAttribute('aria-selected','true');
+    document.getElementById('tab-'+name).classList.add('active');
+    window.scrollTo({top: document.querySelector('.tabs-section').offsetTop - 80, behavior: 'smooth'});
+  }
+  function selectPose(name) {
+    document.querySelectorAll('.pose-selector-card').forEach(function(b) { b.classList.remove('active'); });
+    document.querySelectorAll('.pose-detail-card').forEach(function(c) { c.classList.remove('active'); });
+    
+    var btn = document.querySelector('[data-pose-id="pose-'+name+'"]');
+    var card = document.getElementById('pose-'+name);
+    if (btn) {
+      btn.classList.add('active');
+      var track = document.querySelector('.pose-selector-track');
+      if (track) {
+        var offsetLeft = btn.offsetLeft - (track.clientWidth / 2) + (btn.clientWidth / 2);
+        track.scrollTo({ left: offsetLeft, behavior: 'smooth' });
+      }
+    }
+    if (card) card.classList.add('active');
+
+    // On smaller screens, scroll to detail card
+    if (window.innerWidth <= 868) {
+      var pane = document.querySelector('.pose-details-pane');
+      if (pane) {
+        window.scrollTo({
+          top: pane.offsetTop - 120,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore large video audit
+*.mov
+
+# Ignore slide decks
+Website Update Slide Decks/
+
+# Ignore large design mockups
+*Mockup*

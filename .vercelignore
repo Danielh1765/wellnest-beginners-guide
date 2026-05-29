@@ -1,0 +1,8 @@
+# Exclude large video audit from Vercel
+*.mov
+
+# Exclude slide decks
+Website Update Slide Decks/
+
+# Exclude design mockups
+*Mockup*

@@ -1,9 +1,9 @@
 {
   "cleanUrls": true,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
-      "destination": "/wellnest-beginners-guide.html"
+      "src": "/",
+      "dest": "/wellnest-beginners-guide.html"
     }
   ]
 }
